@@ -1,0 +1,10 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+restartPolicyType = "ALWAYS"
+restartPolicyMaxRetries = 10
+startCommand = "python -m app.main"
+healthcheckPath = "/readyz"
+healthcheckTimeout = 10
